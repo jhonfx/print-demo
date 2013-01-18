@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="printCheque" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bfda943e-ae29-4c25-b21d-2310149443dc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="folio" class="java.lang.Long"/>
+	<field name="fecha" class="java.lang.String"/>
+	<field name="monto" class="java.math.BigDecimal"/>
+	<field name="titulo" class="java.lang.String"/>
+	<field name="totalMoneda" class="java.lang.String"/>
+	<field name="piePagina" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="4" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="4" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="5" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="387" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a7679572-16d2-4c66-9f10-8207ad1c384b" x="355" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[folio]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a0c6238d-c8b1-4b8b-97ad-522aab0953c2" x="455" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{folio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a372d74e-c1f0-4d9d-8bfe-df5d85e5e588" x="355" y="20" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[fecha]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="072b8860-545c-4342-ba8d-ee01b789fd3b" x="455" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="43d8e6e1-2615-4a20-a6ea-61243818b024" x="455" y="82" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="453a24fd-bc98-4c3b-bf0d-c62a4896e1ec" x="23" y="82" width="332" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ec9a757e-3a6b-4973-baed-a08121c370bb" x="23" y="102" width="332" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{totalMoneda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f58efd97-2c5c-410e-974a-919246b02358" x="23" y="151" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{piePagina}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
